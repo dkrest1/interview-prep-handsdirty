@@ -769,17 +769,347 @@
 # print(pets)
 
 
-responses = {}
-polling_active = True
-while polling_active:
-    name = input("please in your name:")
-    response = input("which mountain would you like: ")
-    responses[name] = response
-    message = input("do you still want to say more city: (yes/no): ")
-    if message == "no":
-        polling_active = False
-    print("thanks for voting, your result will be available shortly")
+# responses = {}
+# polling_active = True
+# while polling_active:
+#     name = input("please in your name:")
+#     response = input("which mountain would you like: ")
+#     responses[name] = response
+#     message = input("do you still want to say more city: (yes/no): ")
+#     if message == "no":
+#         polling_active = False
+#     print("thanks for voting, your result will be available shortly")
 
-print("-----result loading....-------")
-for name, response in responses.items():
-    print("\n{} : \n{}".format(name, response))
+# print("-----result loading....-------")
+# for name, response in responses.items():
+#     print("\n{} : \n{}".format(name, response))
+
+
+# Functions
+# def greetUser(username):
+#     """greet a user function"""
+#     print("hello {}!".format(username))
+
+
+# greetUser("Akinyemi")
+# def learning_python():
+#     print("hello I am learning python welcome to my channel")
+
+
+# learning_python()
+
+
+# def fav_book(book_title):
+#     print("my favourite book is {}".format(book_title))
+
+
+# fav_book("love is blind")
+
+
+# def animal_type(cat, name):
+#     print("I know {} belong to the {} family".format(name, cat))
+#     print("still yet I have a {} which name is {}".format(cat, name))
+
+
+# # animal_type("cat", "kira")
+# # animal_type("reptiles", "paramole")
+
+# animal_type(cat="agiliti", name="pelola")
+
+
+# def describe(name, firstname="femi"):
+#     print("hello my my name is {}".format(name))
+
+
+# describe()
+
+# def make_shirt(size="small", text="feel good"):
+#     print("your shirt size is {} and what you customization is {}".format(
+#         size, text.upper()))
+
+# def describe_city(city="lagos", country="nigeria"):
+#     print("{} is in {}".format(city.title(), country.title()))
+
+
+# describe_city()
+# describe_city(city="new-york", country="United-state")
+# describe_city(city="ibadan", country="Nigeria")
+
+# def get_formatted(firstname, lastname, middlename=""):
+#     full_name = firstname + " " + middlename + " " + lastname
+#     return full_name.title()
+
+
+# get_formatted("Oluwatosin", "Akande")
+# get_formatted("Dunni", "motunrayo", "Akande")
+
+
+# returning a dictionary
+# def person(firstname, lastname, age=""):
+#     details = {"first": firstname, "last": lastname}
+#     if age:
+#         details["age"] = age
+#     return details
+
+
+# person1 = person("oluwatosin", "akande")
+# print(person1)
+
+
+# while True:
+#     firstname = input("your firstname: ")
+#     lastname = input("your lastname")
+#     get_formatted(firstname, lastname)
+#     print("hello {}".format(get_formatted(firstname, lastname)))
+
+
+# while True:
+#     firstname = input("please enter your firstname: ")
+#     lastname = input("please input your lastname: ")
+#     if firstname == "q":
+#         break
+#     if lastname == "q":
+#         break
+#     get_formatted(firstname, lastname)
+#     print(get_formatted(firstname, lastname))
+
+
+# def city_details(city, country):
+#     formatted_city = city + ' ' + country
+#     return formatted_city
+
+
+# city_details(ibadan", "nigeria")
+# print(city_details("ibadan", "nigeria"))
+
+
+# def album(name, artist,  make=""):
+#     detail = {"name": name, 'artist': artist}
+#     if make:
+#         detail["make"] = make
+#     return detail
+
+
+# justin_bieber = album("hell yeah", "Justin Bieber", make="17")
+
+# print(justin_bieber)
+
+# while True:
+#     name = input("please enter your name: ")
+#     artist = input("please enter the artist name: ")
+#     make = input("please enter make: ")
+#     if name == 'quit':
+#         break
+#     if artist == 'quit':
+#         break
+#     if make == "quit":
+#         break
+
+#     result = album(name, artist, make)
+#     print(result)
+
+
+# def working_list(names):
+#     for name in names:
+#         message = "hello {}"
+#         print(message.format(name))
+
+
+# usernames = ["ikayh", "kolapo", "kiki"]
+# working_list(usernames)
+
+
+# def process(unprinted_designs, completed_designs):
+#     while unprinted_designs:
+#         current_design = unprinted_designs.pop()
+#         print("the current design {} is being completed".format(current_design))
+#         completed_designs.append(current_design)
+
+
+# def printing_design(completed_designs):
+#     for completed_design in completed_designs:
+#         print("this is one of the completed design {}".format(completed_design))
+
+
+# unprinted_design = ["case", "charger", "panel", "board"]
+# completed_design = []
+# process(unprinted_design[:], completed_design)
+# printing_design(completed_design)
+
+# print(unprinted_design)
+
+
+# magician_lists = ["david", "tola", "bisi"]
+
+
+# def magician_list(names):
+#     for name in names:
+#         print(name)
+
+
+# magician_list(magician_lists)
+
+# def make_toppings(*toppings):
+#     print("hello I handle all these functions differntly")
+#     for topping in toppings:
+#         print(topping)
+
+
+# make_toppings("rice", "beans", "pommo")
+# def making_profile(firstname, lastname, **args):
+#     profile = {}
+#     profile["firstname"] = firstname
+#     profile["lastname"] = lastname
+#     for key, value in args.items():
+#         profile[key] = value
+#     return profile
+
+
+# oluwatosin = making_profile("oluwatosin", "akande", age="26", sex="male")
+# print(oluwatosin)
+
+# def sandwich(major, *other):
+#     print("your sandwich is {}".format(major))
+#     for others in other:
+#         print("other things that is added is {}".format(others))
+# sandwich("liquid", "bitter", "sweet")
+
+
+# def make_car(toyota, mitsubushi, **args):
+#     profile = {}
+#     profile["maker"] = toyota
+#     profile["model"] = mitsubushi
+#     for key, value in args.items():
+#         profile[key] = value
+#     return profile
+
+
+# make_car("toyota", "mitsubushi", color="blue", tow_back=True)
+
+
+# Chpater 9
+# class Dog():
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+#     def sit(self):
+#         return(self.name + " hello how are you doing there? your age is " + str(self.age))
+
+
+# rotwiler = Dog("rot", 22)
+# print(rotwiler.sit())
+
+# print(rotwiler.name)
+
+# class Restaurant():
+#     def __init__(self, restaurant_name, cuishine_type):
+#         self.restaurant_name = restaurant_name
+#         self.cuishine_type = cuishine_type
+
+#     def describe_restaurant(self):
+#         return("the name of this restaurant is is {} and their cushine type is {}".format(self.restaurant_name, self.cuishine_type))
+
+#     def open_restaurant(self):
+#         return("{} is open now".format(self.restaurant_name))
+
+
+# restaurant1 = Restaurant("iyaoba", "iyan")
+# restaurant2 = Restaurant("agbaje", "amala")
+
+# print(restaurant1.restaurant_name)
+# print(restaurant2.restaurant_name)
+# print(restaurant1.cuishine_type)
+# print(restaurant2.cuishine_type)
+# print(restaurant1.describe_restaurant())
+# print(restaurant2.describe_restaurant())
+# print(restaurant1.open_restaurant())
+# print(restaurant2.open_restaurant())
+
+
+# class Car():
+#     def __init__(self, make, model, year):
+#         self.make = make
+#         self.model = model
+#         self.year = year
+#         self.odometer_reading = 0
+
+#     def get_descriptive_name(self):
+#         long_name = self.make + " " + self.model + " " + str(self.year)
+#         return long_name.title()
+
+#     def fill_gas_tank(self):
+#         print("every mechancal car has a gas tank")
+
+#     def update_odometer(self, milage):
+#         if milage > self.odometer_reading:
+#             self.odometer_reading += milage
+#         else:
+#             print("you cannot read back odometer reading")
+
+#     def read_odometer(self):
+#         print("This car has " + str(self.odometer_reading) + " miles on it")
+
+
+# # # my_new_car = Car("audi", 'a4', 2016)
+# # # print(my_new_car.get_descriptive_name())
+# # # my_new_car.read_odometer()
+# # # my_new_car.odometer_reading = 25
+# # # my_new_car.read_odometer()
+# # # my_new_car.update_odometer(60)
+# # # my_new_car.read_odometer()
+# class Battery():
+#     def __init__(self, battery_size=70):
+#         self.battery_size = battery_size
+
+#     def describe_battery(self):
+#         print("this car has {} size kwh battery ".format(str(self.battery_size)))
+#         print(my_testla.battery.get_range())
+
+#     def get_range(self):
+#         if self.battery_size == 70:
+#             range = 240
+#         elif self.battery_size == 85:
+#             range = 270
+#         message = "this car can go approximately " + \
+#             str(range) + " miles on a full charge"
+#         print(message)
+
+
+# class ElectricCar(Car):
+#     def __init__(self, make, model, year):
+#         super().__init__(make, model, year)
+#         self.battery = Battery()
+
+#     def fill_gas_tank(self):
+#         print("sorry but and electric car does not have a gas tank")
+
+
+# my_testla = Electric_car("tesla", 'we4', 2022)
+# print(my_testla.battery.describe_battery())
+
+
+# class Restaurant():
+#     def __init__(self, restaurant_name, cuishine_type):
+#         self.restaurant_name = restaurant_name
+#         self.cuishine_type = cuishine_type
+
+#     def describe_restaurant(self):
+#         return("the name of this restaurant is is {} and their cushine type is {}".format(self.restaurant_name, self.cuishine_type))
+
+#     def open_restaurant(self):
+#         return("{} is open now".format(self.restaurant_name))
+
+
+# class IceCreamStand(Restaurant):
+#     def __init__(self, restaurant_name, cuishine_type):
+#         super().__init__(restaurant_name, cuishine_type)
+#         self.flavours = ["banana", "berry", "cream"]
+
+#     def list_flavour(self):
+#         for flavour in self.flavours:
+#             print(flavour)
+
+
+# ice_cream = IceCreamStand("T_restaurant", "ice_cream")
+# print(ice_cream.list_flavour())
